@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+if [[ -n "$PLEX_TOKEN" ]]; then
+    yes N | plexupdate.sh -dau --token $PLEX_TOKEN
+else
+    yes N | plexupdate.sh -daup
+fi

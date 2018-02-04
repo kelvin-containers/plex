@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p "/config/Plex Media Server/"
+cp -n /etc/default/Preferences.xml "/config/Plex Media Server/"
+rm -f "/config/Plex Media Server/plexmediaserver.pid"
+
+exec start_pms
